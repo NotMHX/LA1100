@@ -11,6 +11,25 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+    <script>
+      if (
+        !sessionStorage.getItem("_swa") &&
+        document.referrer.indexOf(location.protocol + "//" + location.host) !==
+          0
+      ) {
+        fetch(
+          "https://counter.dev/track?" +
+            new URLSearchParams({
+              referrer: document.referrer,
+              screen: screen.width + "x" + screen.height,
+              user: "BlackTiger35773",
+              utcoffset: "2",
+              l,
+            })
+        );
+      }
+      sessionStorage.setItem("_swa", "1");
+    </script>
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
     <title>73 - Home</title>
   </head>
@@ -38,7 +57,10 @@
     </header>
     <main class="main">
       <div class="titlecard">
-        <p>Willkommen</p>
+        <h1>Willkommen</h1>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw">
+          <img src="../images/tweet.png" alt="Tweete das" />
+        </a>
       </div>
 
       <div class="contentcard">
@@ -49,7 +71,7 @@
           ipsa, id iure deleniti odit amet harum beatae sunt alias tempora.
         </p>
 
-        <h1>Wie man Crystal Meth herstellt</h1>
+        <h1>Wie man gute Ideen findet</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum rerum
           eaque optio iure officiis veniam, dicta aspernatur tempora eveniet
@@ -64,6 +86,25 @@
         </p>
 
         <img src="../images/meth.jpg" alt="nein" />
+      </div>
+      <div class="comments">
+        <div id="disqus_thread"></div>
+        <script>
+          (function () {
+            // DON'T EDIT BELOW THIS LINE
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://dreiundsiebzig.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
       </div>
     </main>
     <footer class="footer-container">

@@ -16,11 +16,11 @@ html {
 
 .header-container
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: #91E5F6;
-    height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #91E5F6;
+  height: 6rem;
 }
 
 .header-logo
@@ -69,10 +69,8 @@ html {
   font-size: 1.5rem;
 }
 
-
 .menu a:hover {
   color: #59A5D8;
-  
 }
 
 
@@ -89,8 +87,8 @@ label {
 
 .title
 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 5rem;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5rem;
 }
 
 
@@ -119,6 +117,8 @@ label {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+
+  animation: 1s ease-out 0s 1 slideInLeft;
 }
 
 .titlecard:hover, .titlecard:focus, .titlecard:active {
@@ -128,7 +128,7 @@ label {
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
-.titlecard h1
+.titlecard p
 {
   text-align: center;
   font-size: 5rem;
@@ -147,7 +147,8 @@ label {
   display: block;
   height: 3rem;
   margin: 0 auto;
-  }
+}
+
 
 .contentcard 
 {
@@ -156,29 +157,38 @@ label {
   align-items: center;
   height: auto;
   padding: 0 0 5rem 0;
-  margin: 0 10% 5rem 10%;
-  background-color: #59A5D8;
+  margin: 4rem 10% 4rem 10%;
+  background: linear-gradient(
+    45deg,
+    rgb(137, 230, 248),
+    rgb(7, 149, 219)
+  );
+
+  animation: 1s ease-out 0s 1 slideInRight;
 }
 
-
-.contentcard h1
-{
-    font-family: 'Exo 2', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    font-size: 2.5rem;
-    padding: 4rem 0 0 0;
-}
-.contentcard p
-{
-    font-family: 'Exo 2', sans-serif;
-    text-align: left;
-    font-size: 1.5rem;
-    padding: 0 4rem;
+.contentcard h1 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+  padding: 4rem 0 0 0;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 1px #887474;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
-.contentcard img
-{
+.contentcard p {
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 4rem;
+  letter-spacing: 0.05rem;
+  line-height: 131.73%;
+}
+
+.contentcard img {
   width: 40%;
   margin: 0 30%;
 }
@@ -194,8 +204,10 @@ label {
   background: linear-gradient(
       45deg,
       rgb(123, 167, 189),
-      rgb(14, 86, 121)
+      rgb(14, 60, 121)
     );
+
+    animation: 1s ease-out 0s 1 slideInLeft;
 }
 
 .footer-container {
@@ -206,12 +218,40 @@ label {
 }
 
 .footer {
-  font-family: 'Exo 2', Arial, sans-serif;
+  font-family: 'Permanent Marker', Arial, sans-serif;
   text-align: center;
   font-size: 1.5rem;
   height: 6rem;
 }
 
+.footer a {
+  color:rgb(137, 230, 248);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} 
 
 
 @media screen and (max-width: 900px) {
@@ -247,17 +287,23 @@ label {
   }
 
   .titlecard {
-    margin: 0 5% 5rem 5%;
+    margin: 0 6% 0 6%;
   }
 
-  .titlecard h1
+  .titlecard p
   {
     font-size: 3.5rem;
-    padding: 5rem 0 0 0;
+    margin: 5rem 0 0 0;
+  }
+
+  .titlecard img {
+    display: block;
+    height: 3rem;
+    margin: 0 auto;
   }
 
   .contentcard {
-    margin: 0 5% 5rem 5%;
+    margin: 2rem 6% 2rem 6%;
   }
 
   .contentcard img {
@@ -265,9 +311,132 @@ label {
   margin: 0 20%;
   }
 
-
   .comments {
     margin: 0 5% 5rem 5%;
+  }
+
+  .footer a {
+    text-decoration: underline;
+  }
+
+  .hero
+  {
+    margin: 10% 10%
+  }
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 30% 30%;
+  width: 40%;
+  height: 40%;
+  background: white;
+  border-radius: 25%;
+
+  transition: 1s box-shadow;
+}
+
+.hero:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.hero:hover::before, .hero:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightskyblue;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.hero:hover:after {
+  background: blue;
+  animation: 2s counterclockwise infinite;
+  width: 100%;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
   }
 }
 

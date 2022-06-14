@@ -1,118 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      if (
-        !sessionStorage.getItem("_swa") &&
-        document.referrer.indexOf(location.protocol + "//" + location.host) !==
-          0
-      ) {
-        fetch(
-          "https://counter.dev/track?" +
-            new URLSearchParams({
-              referrer: document.referrer,
-              screen: screen.width + "x" + screen.height,
-              user: "BlackTiger35773",
-              utcoffset: "2",
-              l,
-            })
-        );
-      }
-      sessionStorage.setItem("_swa", "1");
-    </script>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-    <title>73 - Home</title>
-  </head>
-  <body>
-    <header class="header-container">
-      <div class="header">
-        <a href="../index.html"
-          ><img
-            class="header-logo"
-            src="../images/logo_small.png"
-            alt="die zahl 73"
-        /></a>
-      </div>
 
-      <div class="nav">
-        <label for="toggle">&#9776;</label>
-        <input type="checkbox" id="toggle" />
-        <div class="menu">
-          <a href="../pages/home.html">Home</a>
-          <a href="../pages/arithmetik.html">Arithmetik</a>
-          <a href="../pages/geschichte.html">Geschichte</a>
-          <a href="../pages/gebrauch.html">Gebrauch</a>
-          <a href="/pages/facts.html">Fun Facts</a>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <div class="titlecard">
-        <h1>Willkommen</h1>
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw">
-          <img src="../images/tweet.png" alt="Tweete das" />
-        </a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Permanent+Marker&display=swap"
+    rel="stylesheet" />
+  <script>
+    if (
+      !sessionStorage.getItem("_swa") &&
+      document.referrer.indexOf(location.protocol + "//" + location.host) !==
+      0
+    ) {
+      fetch(
+        "https://counter.dev/track?" +
+        new URLSearchParams({
+          referrer: document.referrer,
+          screen: screen.width + "x" + screen.height,
+          user: "BlackTiger35773",
+          utcoffset: "2",
+          l,
+        })
+      );
+    }
+    sessionStorage.setItem("_swa", "1");
+  </script>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <title>73 - Home</title>
+</head>
 
-      <div class="contentcard">
-        <h1>Was es hier gibt</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et tempore
-          vero pariatur doloremque saepe. Mollitia autem, distinctio, nihil quos
-          ipsa, id iure deleniti odit amet harum beatae sunt alias tempora.
-        </p>
+<body>
+  <header class="header-container">
+    <div class="header">
+      <a href="../index.html"><img class="header-logo" src="../images/logo_small.png" alt="die zahl 73" /></a>
+    </div>
 
-        <h1>Wie man gute Ideen findet</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum rerum
-          eaque optio iure officiis veniam, dicta aspernatur tempora eveniet
-          placeat earum mollitia delectus! Itaque, officia ea. Iusto modi ut
-          obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quia expedita dicta, sint, dolor asperiores eos quasi unde nesciunt
-          voluptate pariatur nam commodi, est facere ex quo consequatur
-          accusamus aspernatur aliquam? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Fugiat eum, delectus quos praesentium dignissimos
-          vel fugit consequatur eaque error nemo beatae quas ab quasi, aliquid
-          temporibus quibusdam, perspiciatis perferendis! Dolorum?
-        </p>
+    <div class="nav">
+      <label for="toggle">&#9776;</label>
+      <input type="checkbox" id="toggle" />
+      <div class="menu">
+        <a href="../pages/home.html">Home</a>
+        <a href="../pages/arithmetik.html">Arithmetik</a>
+        <a href="../pages/geschichte.html">Geschichte</a>
+        <a href="../pages/gebrauch.html">Gebrauch</a>
+        <a href="../pages/facts.html">Fun Facts</a>
+        <a href="../index.html">Landing Page</a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="titlecard">
+      <h1>Willkommen</h1>
+      <a
+        href="https://twitter.com/intent/tweet?text=Die Zahl 73 in der (PAGE NAME) https://notmhx.github.io/LA1100/pages/(LINK).html">
+        <img src="../images/tweet.png" alt="Tweete das" />
+      </a>
+    </div>
 
-        <img src="../images/meth.jpg" alt="nein" />
-      </div>
-      <div class="comments">
-        <div id="disqus_thread"></div>
-        <script>
-          (function () {
-            // DON'T EDIT BELOW THIS LINE
-            var d = document,
-              s = d.createElement("script");
-            s.src = "https://dreiundsiebzig.disqus.com/embed.js";
-            s.setAttribute("data-timestamp", +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript
-          >Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript"
-            >comments powered by Disqus.</a
-          ></noscript
-        >
-      </div>
-    </main>
-    <footer class="footer-container">
-      <p class="footer">
-        Mit Freude gemacht von Team Camellia.
-        <a class="link" href="../pages/nachweise.html">Nachweise</a>
+    <div class="contentcard">
+      <h1>Was es hier gibt</h1>
+      <p>
+        Das ist eine Zusammenstellung von Fakten die beweisen, dass die beste Zahl überhaupt 73 ist.
+        In der Arithmetik ist sie allem überlegen. In der Geschichte eine wichtige Zahl und auch in Gebrauch ist sie
+        überlegen. Dazu kommen noch die besten Fun Facts.
+        Die Zahl 73 ist einfach besser als alle anderen zahlen und man kann nichts dagegen machen.
       </p>
-    </footer>
-  </body>
+
+      <img src="../images/home.png" alt="nein" />
+    </div>
+    <div class="comments">
+      <div id="disqus_thread"></div>
+      <script>
+        (function () {
+          // DON'T EDIT BELOW THIS LINE
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://dreiundsiebzig.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </main>
+  <footer class="footer-container">
+    <p class="footer">
+      Mit Freude gemacht von Team Camellia.
+      <a class="link" href="../pages/nachweise.html">Nachweise</a>
+      <a href="../pages/easteregg.html" style="text-decoration: none; ">
+        <font color=386FA4>73</font>
+      </a>
+    </p>
+  </footer>
+</body>
+
 </html>

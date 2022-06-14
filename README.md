@@ -1,4 +1,4 @@
-# LA1100
+# Die Zahl 73 / The number 73
 
 ### Link: https://notmhx.github.io/LA1100
 

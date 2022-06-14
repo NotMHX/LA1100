@@ -188,7 +188,7 @@ label {
   line-height: 131.73%;
 }
 
-.contentcard img {
+.contentcard img, .videoplayer {
   width: 40%;
   margin: 0 30%;
 }
@@ -314,9 +314,9 @@ label {
     margin: 0 1%;
   }
 
-  .contentcard img {
-  width: 60%;
-  margin: 0 20%;
+  .contentcard img, .contentcard iframe {
+  width: 90%;
+  margin: 0 5%;
   }
 
   .comments {
